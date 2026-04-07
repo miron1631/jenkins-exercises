@@ -7,7 +7,6 @@ pipeline {
         stage('increment version') {
             steps {
                 script {
-                    # enter app directory, because that's where package.json is located
                     dir("app") {
                         sh "npm version minor —no-git-tag-version"
 
